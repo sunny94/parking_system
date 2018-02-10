@@ -18,7 +18,7 @@ if __name__ == "__main__":
         user_input = raw_input().split(" ")
         parking_lot = ParkingLot(int(user_input[1]))
         user_input = raw_input()
-        while user_input != "exit" and user_input != "\n":# repeat till input is not equal to exit or newline
+        while user_input not in ["exit","\n",""]:# repeat till input is not equal to exit or newline
             user_input = user_input.split(" ")
             getattr(parking_lot, user_input[0])(*user_input[1:])
             user_input = raw_input()
